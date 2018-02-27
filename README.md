@@ -1,6 +1,8 @@
 # WORKSHOP RHDM7
 Workshop sobre o Red Hat Decision Manager 7 (ex-BRMS)
 
+![Overview](./images/rhdm7.png)
+
 ## Descrição
 Este é um workshop prático com o objetivo de fornecer uma primeira experiência na construção de regras utilizando o Red Hat Decision Manager 7 (ex-BRMS).
 
