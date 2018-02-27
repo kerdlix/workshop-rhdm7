@@ -29,7 +29,7 @@ oc create -f https://raw.githubusercontent.com/jboss-container-images/rhdm-7-ope
 oc create -f https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/templates/rhdm70-kieserver-https-s2i.yaml -n openshift
 ```
 
-O próximo passo é a criação do container
+O próximo passo é a criação do container:
 ```
 oc new-project loan-application
 oc create -f https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/decisioncentral-app-secret.yaml
