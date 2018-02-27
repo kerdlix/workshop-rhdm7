@@ -20,7 +20,7 @@ Esta opção utiliza o processo de S2I do Openshift na qual os artefatos de regr
 
 Esta opção é utilizada quando se quer imagens imutáveis do Decision Server. Quando uma nova regra precisa de deploy, uma nova imagem de microserviço é criada novamente através do processo de S2I.
 
-A primeira parte consiste em importar as a Image Stream e os Templates da versão do Decision Manager 7 para o Openshift (deve ser feito com um usuário com permissão para tal). Este procedimento precisa ser executado apenas uma única vez:
+A primeira parte consiste em importar as a Image Stream e os Templates da versão do Decision Manager 7 para o Openshift (deve ser feito com um usuário com permissão para tal). [Este procedimento](../scripts/setup-templates.sh) precisa ser executado apenas uma única vez:
 ```
 oc create -f https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/rhdm70-image-streams.yaml -n openshift
 oc create -f https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/templates/rhdm70-full.yaml -n openshift
@@ -29,7 +29,7 @@ oc create -f https://raw.githubusercontent.com/jboss-container-images/rhdm-7-ope
 oc create -f https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/templates/rhdm70-kieserver-https-s2i.yaml -n openshift
 ```
 
-O próximo passo é a criação do container:
+[O próximo passo](../scripts/s2i.sh) é a criação do container:
 ```
 oc new-project loan-application
 oc create -f https://raw.githubusercontent.com/jboss-container-images/rhdm-7-openshift-image/rhdm70-dev/decisioncentral-app-secret.yaml
