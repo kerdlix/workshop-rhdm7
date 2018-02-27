@@ -13,6 +13,8 @@ Esta opção cria um Decision Deployment Unit (KJar) via Decision Central (ou co
 
 Esta opção é utilizada quando o usuário quer controlar o deployment das regras da interface visual do Decision Central ou KIE-Controller. Pode ser feito o deploy de novas regras em runtime sem a necessidade de um build de uma imagem de container do Decision Server.
 
+Este processo é semelhante às versões anteriores do BRMS e pode ser executada através [deste projeto](https://github.com/jbossdemocentral/rhdm7-loan-demo). Executar a opção 2 - Run on OpenShift, dos passos 6 ao 14.
+
 ## Source to Image (S2I) no Openshift
 Esta opção utiliza o processo de S2I do Openshift na qual os artefatos de regras (regras, modelos DMN, Decision Tables, etc) criados via interface visual do Decision Central são armazenados em um repositório GIT. A imagem do Decision Server para fazer o build do S2I no Openshift baixa os fontes do repositório GIT e cria um Decision Deployment Unit (KJar). Após, o processo S2I cria um container de microserviço (ou microregra) e executa o deploy no Openshift.
 
